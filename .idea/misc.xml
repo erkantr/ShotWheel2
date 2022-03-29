@@ -4,27 +4,55 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/background_gradient.xml" value="0.152" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/blue_button.xml" value="0.2115" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/button_gradient.xml" value="0.152" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/choose_button_background.xml" value="0.173" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dark_red_button.xml" value="0.17" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_2_background.xml" value="0.2115" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_background.xml" value="0.152" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_button_background.xml" value="0.152" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_button_background_2.xml" value="0.152" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_gradient.xml" value="0.152" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_gradient_2.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_gradient_linear.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/dialog_gradient_linear_2.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/edittext_background.xml" value="0.152" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/edittext_background_2.xml" value="0.152" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/ic_close.xml" value="0.1905" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/ic_ellipse_1.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/ic_ellipse_2.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/oylama_background.xml" value="0.209" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/question_background.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/question_gradient_background.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/questions_background.xml" value="0.2115" />
         <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/shotwheel_background.xml" value="0.152" />
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/background_gradient.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/dialog_background.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/dialog_button_background.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/dialog_button_background_2.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.327" />
-        <entry key="app/src/main/res/drawable/shotwheel_background.xml" value="0.327" />
-        <entry key="app/src/main/res/layout/activity_launch_screen.xml" value="0.33177083333333335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/spinning_wheel.xml" value="0.211" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/start_button.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/drawable/track.xml" value="0.2115" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/activity_launch_screen.xml" value="0.22" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/activity_prepare_screen.xml" value="0.3048211508553655" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/choose_player.xml" value="0.18" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/choose_player_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_ben_kimim.xml" value="0.33" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_cizerek_anlat.xml" value="0.2" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_dans_zamani.xml" value="0.25" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_dogruluk_cesaretlik.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_ititraf_et.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_soru_cevapla.xml" value="0.22" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_taklit_et.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/fragment_tartisma_zamani.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/halk_oylamasi1_dialog.xml" value="0.2" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/halk_oylamasi2_dialog.xml" value="0.21" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/info_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/Cihan/AndroidStudioProjects/ShotWheel/app/src/main/res/layout/leader_board_dialog.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_prepare_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/tartisma_zamani_screen.xml" value="0.3724696356275304" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

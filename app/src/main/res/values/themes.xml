@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ShotWheel" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.ShotWheel" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme2" parent="Theme.Design.Light.NoActionBar">
+        <item name="colorPrimary">#666666</item>
+        <item name="colorPrimaryDark">#666666</item>
+        <item name="colorAccent">#666666</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="AnimationPopup">
+        <item name="android:windowEnterAnimation">@anim/appear</item>
+        <item name="android:windowExitAnimation">@anim/disappear</item>
     </style>
 </resources>

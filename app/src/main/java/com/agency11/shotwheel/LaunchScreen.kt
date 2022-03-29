@@ -31,6 +31,7 @@ class LaunchScreen : AppCompatActivity() {
                 } finally {
                     //val intent = Intent(this@LaunchScreen, PrepareScreen::class.java)
                     startActivity(Intent(this@LaunchScreen, PrepareScreen::class.java))
+                finish()
                 }
 
             }

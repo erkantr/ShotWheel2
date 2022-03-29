@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "770171372821",
+    "project_id": "shotwheel-21279",
+    "storage_bucket": "shotwheel-21279.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770171372821:android:57f554ca357e0c99dc151c",
+        "android_client_info": {
+          "package_name": "com.agency11.shotwheel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770171372821-6798sdinvte5m9crs1nnm9h6g584m40k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agency11.shotwheel",
+            "certificate_hash": "bab6bd307a420ab83bc34fac787ece6400da91d1"
+          }
+        },
+        {
+          "client_id": "770171372821-3ef1hmdd4e2mqi7cjfvsto1usu2o4ecd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAayLYZfouYYy7x-Oa2Q1uXcsUPw5Qfgxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770171372821-3ef1hmdd4e2mqi7cjfvsto1usu2o4ecd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

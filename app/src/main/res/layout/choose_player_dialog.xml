@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_background"
+    android:layout_height="285dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oyuncu Sayısı Seçin"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#181717"
+            android:layout_gravity="center"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/treeplayer"
+                android:layout_width="81dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/dialog_button_background"
+                android:layout_height="81dp">
+
+                <TextView
+                    android:id="@+id/player_number1"
+                    android:layout_width="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/player_text1"
+                    android:layout_width="wrap_content"
+                    android:text="Üç"
+                    android:textColor="#F0BEA1"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourplayer"
+                android:layout_width="81dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/dialog_button_background_2"
+                android:layout_height="81dp">
+
+                <TextView
+                    android:id="@+id/player_number2"
+                    android:layout_width="wrap_content"
+                    android:text="4"
+                    android:textColor="#393232"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/player_text2"
+                    android:layout_width="wrap_content"
+                    android:text="Dört"
+                    android:textColor="#B9B7B7"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fiveplayer"
+                android:layout_width="81dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/dialog_button_background_2"
+                android:layout_height="81dp">
+
+                <TextView
+                    android:id="@+id/player_number3"
+                    android:layout_width="wrap_content"
+                    android:text="5"
+                    android:textColor="#393232"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/player_text3"
+                    android:layout_width="wrap_content"
+                    android:text="Beş"
+                    android:textColor="#B9B7B7"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixplayer"
+                android:layout_width="81dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/dialog_button_background_2"
+                android:layout_height="81dp">
+
+                <TextView
+                    android:id="@+id/player_number4"
+                    android:layout_width="wrap_content"
+                    android:text="6"
+                    android:textColor="#393232"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/player_text4"
+                    android:layout_width="wrap_content"
+                    android:text="Altı"
+                    android:textColor="#B9B7B7"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
