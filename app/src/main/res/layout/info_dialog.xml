@@ -33,14 +33,18 @@
         android:layout_gravity="right"
         android:src="@drawable/dialog_gradient_linear_2" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="25dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -53,10 +57,12 @@
             android:src="@drawable/ic_close" />
 
         <Button
+            android:id="@+id/title_button"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/dark_red_button"
             android:fontFamily="@font/roboto_regular"
@@ -66,6 +72,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -81,6 +88,7 @@
 \n\nİyi eğlenceler...\n" />
 
         <Button
+            android:id="@+id/button"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Hazırım..."
@@ -92,6 +100,9 @@
             android:layout_gravity="center"
             android:layout_marginBottom="12dp"/>
 
+
     </LinearLayout>
+
+    </ScrollView>
 
 </androidx.cardview.widget.CardView>

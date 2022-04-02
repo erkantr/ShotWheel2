@@ -10,50 +10,56 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="74dp"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Puan:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Puan:"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/puan"
-            android:fontFamily="@font/roboto_regular"
-            android:layout_width="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="15"/>
+            <TextView
+                android:id="@+id/puan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="15"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
         <SeekBar
+            android:id="@+id/seek_bar"
             android:layout_width="match_parent"
-            android:max="100"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="42dp"
-            android:layout_marginRight="42dp"
             android:layout_marginTop="213dp"
-            android:progress="50"
+            android:layout_marginRight="42dp"
+            android:thumbTint="#FF0000"
+            android:max="100"
+            android:progressBackgroundTint="#FF0000"
+            android:progressTint="#FF0000"
+
             android:outlineAmbientShadowColor="@color/black"
             android:outlineSpotShadowColor="@color/black"
-            android:layout_height="wrap_content"/>
+            android:progress="50" />
 
         <TextView
+            android:id="@+id/duration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="24sp"
             android:layout_marginTop="15dp"
-            android:text="00:38/00:22"/>
+            android:fontFamily="@font/roboto_regular"
+            android:text="00:38/00:22"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
