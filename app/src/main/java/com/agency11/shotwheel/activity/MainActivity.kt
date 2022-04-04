@@ -6,9 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.DecelerateInterpolator
-import android.view.animation.RotateAnimation
+import android.view.animation.*
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -22,6 +20,7 @@ import com.google.firebase.database.ktx.getValue
 import com.mongodb.Mongo
 import com.mongodb.MongoClient
 import java.util.*
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -80,9 +79,23 @@ class MainActivity : AppCompatActivity() {
         val p5point = preferences.getInt("p5point",0)
         val p6point = preferences.getInt("p6point",0)
 
+        val text = "Öncelikle hoşgeldiniz.\n" +
+                "\n" +
+                "Her kategorinin bilgilendirme penceresi, sırası gelen kişiyi yönlendirecektir.\n" +
+                "\n" +
+                "Çarkı döndürmek için üzerine bir kere dokunmak yeterlidir.\n" +
+                "\n" +
+                "Her kategori süreli ve puanlıdır.\n" +
+                "\n" +
+                "Sırasını geçmek isteyen pas butonunu kullanabilir.\n" +
+                "\n" +
+                "Ayrıca puan tablosundan puanlar görüntülenebilir.\n" +
+                "\n" +
+                "İyi eğlenceler..."
+
         val dialogs = Dialogs(this)
         if(preferences.getInt("game", 0) == 0){
-            dialogs.getMainInfoDialog()
+                    dialogs.getMainInfoDialog()
         }
         val editor = preferences.edit()
         editor.putInt("game",1)
@@ -121,9 +134,9 @@ class MainActivity : AppCompatActivity() {
             0.5f
         )
 
-        rotateAnimation.duration = 7000
+        rotateAnimation.duration = 15000
         rotateAnimation.fillAfter = true
-        rotateAnimation.interpolator = DecelerateInterpolator()
+        rotateAnimation.interpolator = OvershootInterpolator()
         rotateAnimation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(p0: Animation?) {
 
@@ -133,7 +146,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity,FragmentActivity::class.java)
                 if (sectors.size - (degree + 1) + 1 == 8) {
 
-                    intent.putExtra("fragment",sectors[6])
+                    intent.putExtra("fragment",sectors[0])
 
                     //val bundle = Bundle()
                     //bundle.putString("player", playerList[a])
@@ -147,7 +160,7 @@ class MainActivity : AppCompatActivity() {
 
                 } else if(sectors.size - (degree + 1) + 1 == 1){
 
-                    intent.putExtra("fragment",sectors[6])
+                    intent.putExtra("fragment",sectors[8])
 
                     //val bundle = Bundle()
                     //bundle.putString("player", playerList[a])
@@ -163,7 +176,7 @@ class MainActivity : AppCompatActivity() {
 
                 } else {
 
-                    intent.putExtra("fragment",sectors[6])
+                    intent.putExtra("fragment",sectors[sectors.size - (degree +1) +1])
 
                     //val bundle = Bundle()
                     //bundle.putString("player", playerList[a])
@@ -202,6 +215,17 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame, fragment)
         fragmentTransaction.commit()
+    }
+
+    var backbtn = 0
+
+    override fun onBackPressed() {
+        backbtn += 1
+        if (backbtn == 2){
+            finish()
+        } else{
+            Toast.makeText(this,"Oyundan çıkmak için bir daha tıklayın",Toast.LENGTH_LONG).show()
+        }
     }
 
 }

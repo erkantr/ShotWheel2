@@ -23,7 +23,6 @@
             android:text="Puan:"/>
 
         <TextView
-            android:id="@+id/puan"
             android:fontFamily="@font/roboto_regular"
             android:layout_width="wrap_content"
             android:textSize="24sp"
@@ -70,8 +69,10 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/soru"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="147dp"
+                android:gravity="center"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="24sp"
                 android:text="Soru Alanı..."
@@ -79,7 +80,13 @@
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"/>
 
+            <LinearLayout
+                android:id="@+id/question_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
             <Button
+                android:id="@+id/a"
                 android:layout_width="match_parent"
                 android:text="A"
                 android:layout_marginLeft="36dp"
@@ -92,6 +99,7 @@
                 android:layout_height="wrap_content"/>
 
             <Button
+                android:id="@+id/b"
                 android:layout_width="match_parent"
                 android:text="B"
                 android:layout_marginLeft="36dp"
@@ -104,6 +112,7 @@
                 android:layout_height="wrap_content"/>
 
             <Button
+                android:id="@+id/c"
                 android:layout_width="match_parent"
                 android:text="C"
                 android:layout_marginLeft="36dp"
@@ -116,17 +125,20 @@
                 android:layout_height="wrap_content"/>
 
             <Button
+                android:id="@+id/d"
                 android:layout_width="match_parent"
-                android:text="D"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
                 android:layout_marginTop="13dp"
-                android:textSize="24sp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/roboto_regular"
-                android:textColor="@color/white"
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="42dp"
                 android:background="@drawable/ic_question_background"
-                android:layout_height="wrap_content"/>
+                android:fontFamily="@font/roboto_regular"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

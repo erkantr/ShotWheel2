@@ -82,10 +82,7 @@
             android:textSize="18sp"
             android:layout_marginRight="25dp"
             android:gravity="center"
-            android:text="Sıranın kimde olduğu isimlerin üstündeki renklerden bellidir.
-\n\nÇarkı döndürmek için üzerine bir kere dokunmak yeterlidir.
-\n\nHer kategori süreli ve puanlıdır.
-\n\nİyi eğlenceler...\n" />
+            android:text="Öncelikle hoşgeldiniz.\n\nHer kategorinin bilgilendirme penceresi, sırası gelen kişiyi yönlendirecektir.\n\nÇarkı döndürmek için üzerine bir kere dokunmak yeterlidir.\n\nHer kategori süreli ve puanlıdır.\n\nSırasını geçmek isteyen pas butonunu kullanabilir.\n\nAyrıca puan tablosundan puanlar görüntülenebilir.\n\nİyi eğlenceler...\n" />
 
         <Button
             android:id="@+id/button"

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.R
 import com.agency11.shotwheel.databinding.ActivityFragmentBinding
@@ -43,7 +44,7 @@ class FragmentActivity : AppCompatActivity() {
             "Taklit Et"-> changeFragment(fragments[1])
             "İtiraf Et"-> changeFragment(fragments[2])
             "Tartışma Zamanı"-> changeFragment(fragments[3])
-            "Doğruluk Cesaretlik"-> changeFragment(fragments[4])
+            "Doğruluk Cesaret"-> changeFragment(fragments[4])
             "Soruyu Cevapla"-> changeFragment(fragments[5])
             "Dans Zamanı"-> changeFragment(fragments[6])
             "Çizerek Anlat"-> changeFragment(fragments[7])
@@ -55,5 +56,16 @@ class FragmentActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame, fragment)
         fragmentTransaction.commit()
+    }
+
+    var backbtn = 0
+
+    override fun onBackPressed() {
+        backbtn += 1
+        if (backbtn == 2){
+            finish()
+        } else{
+            Toast.makeText(this,"Oyundan çıkmak için bir daha tıklayın", Toast.LENGTH_LONG).show()
+        }
     }
 }

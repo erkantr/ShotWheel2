@@ -1,5 +1,6 @@
 package com.agency11.shotwheel.fragment
 
+import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -45,7 +46,9 @@ class DansZamaniFragment : Fragment() {
                 "\n" +
                 "Alacağın puan arkadaşlarının elinde ;)\n" +
                 "\n" +
-                "Bol şans..."
+                "TELEFONUN SESİNİ AÇÇÇ..\n" +
+                "\n" +
+                "Bol şans...\n"
         val dialogs = Dialogs(requireContext())
 
         val random_music = Random.nextInt(musics.size -1)
@@ -82,7 +85,10 @@ class DansZamaniFragment : Fragment() {
         handler.postDelayed(runnable,1000)
         mediaPlayer.setOnCompletionListener {
             mediaPlayer.pause()
-            dialogs.getDansOylamasiDialog(player, requireActivity())
+            val activity: Activity = requireActivity()
+            if(activity != null && isAdded){
+                dialogs.getDansOylamasiDialog(player, requireActivity())
+            }
             for (a in list.indices){
                 println(list[a])
             }

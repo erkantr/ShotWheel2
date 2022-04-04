@@ -3,6 +3,7 @@ package com.agency11.shotwheel.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.agency11.shotwheel.databinding.ActivityLaunchScreenBinding
 import kotlin.concurrent.thread
 
@@ -35,5 +36,16 @@ class LaunchScreen : AppCompatActivity() {
             }
 
         }
+
+    var backbtn = 0
+
+    override fun onBackPressed() {
+        backbtn += 1
+        if (backbtn == 2){
+            finish()
+        } else{
+            Toast.makeText(this,"Oyundan çıkmak için bir daha tıklayın", Toast.LENGTH_LONG).show()
+        }
+    }
 
     }

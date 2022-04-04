@@ -62,6 +62,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:textSize="24sp"
                 android:textColor="@color/black"
@@ -91,6 +92,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -103,6 +105,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -119,6 +122,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -131,6 +135,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -147,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -159,6 +165,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -169,12 +176,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -187,6 +196,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -197,12 +207,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -215,6 +227,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -225,12 +238,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/player6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -243,6 +258,7 @@
                     android:text="Player"/>
 
                 <TextView
+                    android:id="@+id/number6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -253,6 +269,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/button"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:text="Devam"

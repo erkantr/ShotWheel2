@@ -16,19 +16,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:gravity="center"
             android:layout_height="wrap_content">
 
             <RelativeLayout
-                android:layout_width="40dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="5dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                <ImageView
+                <Button
                     android:id="@+id/players"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_baseline_groups_24" />
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/blue_button"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Puan Tablosu"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
 
             </RelativeLayout>
 
@@ -75,6 +82,20 @@
             android:fontFamily="@font/roboto_medium"
             android:textColor="#E08D11"
             android:text="Erkan"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/blue_button"
+            android:fontFamily="@font/roboto_regular"
+            android:text="PAS"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

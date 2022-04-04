@@ -1,10 +1,24 @@
 {
   "project_info": {
     "project_number": "770171372821",
+    "firebase_url": "https://shotwheel-21279-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "shotwheel-21279",
     "storage_bucket": "shotwheel-21279.appspot.com"
   },
   "client": [
+    {
+
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770171372821-3ef1hmdd4e2mqi7cjfvsto1usu2o4ecd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:770171372821:android:57f554ca357e0c99dc151c",

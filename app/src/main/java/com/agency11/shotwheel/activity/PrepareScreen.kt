@@ -67,6 +67,7 @@ class PrepareScreen : AppCompatActivity() {
                 editor.putInt("players",3)
                 editor.putInt("playernumber", 0)
                 editor.putInt("game",0)
+                editor.putInt("timer",0)
                 when (players) {
                     3 ->{
                         startActivity(Intent(this, MainActivity::class.java))
@@ -314,6 +315,17 @@ class PrepareScreen : AppCompatActivity() {
         dialog.show()
         dialog.window!!.setWindowAnimations(R.style.AnimationPopup)
         dialog.window!!.clearFlags(FLAG_DIM_BEHIND)
+    }
+
+    var backbtn = 0
+
+    override fun onBackPressed() {
+        backbtn += 1
+        if (backbtn == 2){
+            finish()
+        } else{
+            Toast.makeText(this,"Oyundan çıkmak için bir daha tıklayın",Toast.LENGTH_LONG).show()
+        }
     }
 
 }

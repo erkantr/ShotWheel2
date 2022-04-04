@@ -47,7 +47,9 @@
                         android:layout_marginRight="62dp"
                         android:background="@drawable/choose_button_background"
                         android:text="Seç"
+                        android:textColor="#1D336B"
                         android:textAllCaps="false"
+                        style="@style/start"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -90,8 +92,11 @@
 
                             <EditText
                                 android:id="@+id/et1"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -128,8 +133,11 @@
 
                             <EditText
                                 android:id="@+id/et2"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -166,8 +174,11 @@
 
                             <EditText
                                 android:id="@+id/et3"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -205,8 +216,11 @@
 
                             <EditText
                                 android:id="@+id/et4"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -244,8 +258,11 @@
 
                             <EditText
                                 android:id="@+id/et5"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -283,8 +300,11 @@
 
                             <EditText
                                 android:id="@+id/et6"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
+                                android:maxLength="10"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -306,8 +326,10 @@
                     android:layout_marginTop="83dp"
                     android:background="@drawable/start_button"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="İyi Eğlenceler"
+                    android:theme="@style/AppTheme2"
                     android:textAllCaps="false"
+                    style="@style/start"
+                    android:text="İyi Eğlenceler"
                     android:textColor="@color/white"
                     android:textSize="28sp" />
 

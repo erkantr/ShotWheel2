@@ -7,58 +7,58 @@
     tools:context=".fragment.BenKimimFragment">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="74dp"
-            android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="33dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Puan:"/>
+            android:layout_marginTop="74dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Puan:"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/puan"
-                android:fontFamily="@font/roboto_regular"
                 android:layout_width="wrap_content"
-                android:textSize="24sp"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="15"/>
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="15"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:gravity="right"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="right">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="33dp"
-                    android:textSize="24sp"
-                    android:textColor="@color/black"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="Kalan Süre:"/>
+                    android:text="Kalan Süre:"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/time"
-                    android:fontFamily="@font/roboto_regular"
                     android:layout_width="wrap_content"
-                    android:textSize="24sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="34dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="30"
                     android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:text="30"/>
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
@@ -67,43 +67,39 @@
         <TextView
             android:id="@+id/kelime"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="133dp"
+            android:fontFamily="@font/roboto_regular"
             android:text="Donald Trump"
             android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="30sp"
-            android:layout_height="wrap_content"/>
+            android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/yasakli1"
+            android:id="@+id/yasakli_kelimeler"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Donald Trump"
             android:layout_marginTop="28dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
-            android:textSize="24sp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center"
+            android:text="Donald Trump"
+            android:textColor="#2E2E2E"
+            android:textSize="24sp" />
 
         <Button
+            android:id="@+id/button"
             android:layout_width="150dp"
             android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/blue_button"
+            android:fontFamily="@font/roboto_regular"
             android:text="Bildiler"
             android:textAllCaps="false"
-            android:layout_marginTop="52dp"
-            android:textSize="24sp"
-            android:shadowColor="@color/black"
-            android:shadowRadius="50"
-            android:shadowDx="-10"
-            android:shadowDy="-30"
-            android:outlineSpotShadowColor="@color/black"
-            android:outlineAmbientShadowColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
-            android:background="@drawable/blue_button"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"/>
+            android:textSize="24sp" />
     </LinearLayout>
 
 </RelativeLayout>
