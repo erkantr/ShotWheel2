@@ -3,6 +3,7 @@ package com.agency11.shotwheel.fragment
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -79,7 +80,7 @@ class DogrulukCesaretlikFragment : Fragment() {
         timer = object : CountDownTimer(75000, 1000) {
             override fun onTick(p0: Long) {
                 var time: TextView = binding.time
-                val timetext = p0 / 1000 % 60
+                val timetext = p0 / 1000
                 time.text = "$timetext"
             }
 
@@ -97,10 +98,12 @@ class DogrulukCesaretlikFragment : Fragment() {
                         requireActivity().finish()
                     }
                 }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
 
         }
-                dialogs.getInfoDialog(dialog_text, "Doğruluk mu Cesaretlik mi", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "Doğruluk mu Cesaretlik mi", null, timer)
 
         binding.button.setOnClickListener {
             timer.cancel()

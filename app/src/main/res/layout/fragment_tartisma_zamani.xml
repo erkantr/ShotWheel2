@@ -53,7 +53,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="34dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="30"
+                    android:text="180"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -74,5 +74,12 @@
             android:textSize="30sp" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:visibility="gone"
+        android:background="#E6000000"/>
 
 </RelativeLayout>

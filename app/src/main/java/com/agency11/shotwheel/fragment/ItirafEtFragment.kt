@@ -3,6 +3,7 @@ package com.agency11.shotwheel.fragment
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -82,7 +83,7 @@ class ItirafEtFragment : Fragment() {
             }
 
         }
-                dialogs.getInfoDialog(dialog_text, "İtiraf Et", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "İtiraf Et", null, timer)
 
         /*
         binding.button.setOnClickListener {

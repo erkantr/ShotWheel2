@@ -44,7 +44,7 @@
             android:name=".activity.PrepareScreen"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/Theme.ShotWheel" />
         <activity
             android:name=".activity.LaunchScreen"
             android:exported="true"

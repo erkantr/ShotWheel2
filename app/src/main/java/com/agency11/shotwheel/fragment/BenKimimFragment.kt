@@ -3,6 +3,7 @@ package com.agency11.shotwheel.fragment
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Range
@@ -55,7 +56,7 @@ class BenKimimFragment : Fragment() {
                 "\n" +
                 "Hayır 29.5 saniye verecektim, son anda kararımı değiştirip 30 saniye yaptım.\n" +
                 "\n" +
-                "Bırak şu telefonu elinden."
+                "Bırak şu telefonu elinden.\n"
 
         val dialogs = Dialogs(requireContext())
 
@@ -64,7 +65,7 @@ class BenKimimFragment : Fragment() {
         val preferences = requireContext().getSharedPreferences("players", Context.MODE_PRIVATE)
         val player = preferences.getString("currplayer", "")!!
 
-        timer = object : CountDownTimer(31000, 1000) {
+        timer = object : CountDownTimer(30000, 1000) {
             override fun onTick(p0: Long) {
                 var time: TextView = binding.time
                 val timetext = p0 / 1000 % 60
@@ -76,10 +77,12 @@ class BenKimimFragment : Fragment() {
                 if(activity != null && isAdded){
                     dialogs.getEndDialog(dialog_text2, "Devam", activity)
                 }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
 
         }
-                dialogs.getInfoDialog(dialog_text, "Ben Kimim", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "Ben Kimim", null, timer)
 
         binding.button.setOnClickListener {
             timer.cancel()
@@ -94,6 +97,7 @@ class BenKimimFragment : Fragment() {
                     e.printStackTrace()
                 } finally {
                     startActivity(Intent(requireActivity(),MainActivity::class.java))
+                    requireActivity().finish()
                 }
 
             }

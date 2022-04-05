@@ -1,5 +1,6 @@
 package com.agency11.shotwheel.fragment
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
@@ -7,18 +8,15 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnTouchListener
 import android.view.ViewGroup
-import android.widget.SeekBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
-import com.agency11.shotwheel.databinding.ActivityMainBinding
-import com.agency11.shotwheel.databinding.FragmentBenKimimBinding
 import com.agency11.shotwheel.databinding.FragmentDansZamaniBinding
-import java.time.Duration
 import kotlin.random.Random
+
 
 class DansZamaniFragment : Fragment() {
 
@@ -33,6 +31,7 @@ class DansZamaniFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,7 +52,7 @@ class DansZamaniFragment : Fragment() {
 
         val random_music = Random.nextInt(musics.size -1)
         var mediaPlayer = MediaPlayer.create(requireContext(), musics[random_music])
-        dialogs.getInfoDialog(dialog_text,"Dans Zamanı",mediaPlayer)
+        dialogs.getInfoDialog(binding.background,dialog_text,"Dans Zamanı",mediaPlayer)
 
         val preferences = requireContext().getSharedPreferences("players", Context.MODE_PRIVATE)
 
@@ -68,6 +67,9 @@ class DansZamaniFragment : Fragment() {
 
         binding.seekBar.progress = 0
         binding.seekBar.max = mediaPlayer.duration
+
+        binding.seekBar.setOnTouchListener { _, _ -> true }
+
         //mediaPlayer.start()
 
         //val bundle = arguments

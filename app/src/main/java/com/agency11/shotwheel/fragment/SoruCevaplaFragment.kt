@@ -3,15 +3,13 @@ package com.agency11.shotwheel.fragment
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -67,7 +65,7 @@ class SoruCevaplaFragment : Fragment() {
                 "Çekmiyor mu?\n"
         val dialogs = Dialogs(requireContext())
 
-                dialogs.getInfoDialog(dialog_text,"Soruyu Cevapla")
+        val background: RelativeLayout = view.findViewById(R.id.background)
 
         getSoruCevapla()
 
@@ -98,10 +96,12 @@ class SoruCevaplaFragment : Fragment() {
                 if(activity != null && isAdded){
                     dialogs.getEndDialog(dialog_text2, "Devam", requireActivity())
                 }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
 
         }
-        dialogs.getInfoDialog(dialog_text, "Soruyu Cevapla", null, timer)
+        dialogs.getInfoDialog(background,dialog_text, "Soruyu Cevapla", null, timer)
 
         return view
     }
@@ -150,7 +150,7 @@ class SoruCevaplaFragment : Fragment() {
                 cevap = post.dogru_cevap.toString()
 
                 if (selectedOptions.text.toString() == cevap) {
-                    selectedOptions.setBackgroundResource(R.drawable.question_false)
+                    selectedOptions.setBackgroundResource(R.drawable.question_true)
                     val dialogs = Dialogs(requireContext())
                     dialogs.addPoint(player,15)
                     Toast.makeText(requireContext(),"Hadi yine iyisin, kaptın puanı", Toast.LENGTH_SHORT).show()

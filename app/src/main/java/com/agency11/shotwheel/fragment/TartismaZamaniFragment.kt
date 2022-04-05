@@ -2,6 +2,7 @@ package com.agency11.shotwheel.fragment
 
 import android.app.Activity
 import android.content.Context
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -43,7 +44,7 @@ class TartismaZamaniFragment : Fragment() {
                 "\n" +
                 "180 saniye süreniz var\n" +
                 "\n" +
-                "Bol şanslar..."
+                "Bol şanslar...\n"
         val dialogs = Dialogs(requireContext())
         getTartismaZamani(binding.kelime)
 
@@ -62,18 +63,21 @@ class TartismaZamaniFragment : Fragment() {
                 timer.cancel()
                 val activity: Activity = requireActivity()
                 if(activity != null && isAdded){
-                    dialogs.getOylamaDialog(player, "Sizce en sağlam tartışmacı kim?", requireActivity(),30)                }
+                    dialogs.getOylamaDialog(player, "Sizce en sağlam tartışmacı kim?", requireActivity(),30)
+                }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
 
         }
-                dialogs.getInfoDialog(dialog_text, "Tartışma Zamanı", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "Tartışma Zamanı", null, timer)
 
 
         return view
     }
     fun getTartismaZamani(tw1: TextView) {
         database = FirebaseDatabase.getInstance().reference.child("tartisma_zamani")
-            .child((1..6).random().toString())
+            .child((1..5).random().toString())
 
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

@@ -3,6 +3,7 @@ package com.agency11.shotwheel.fragment
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -49,7 +50,7 @@ class CizerekAnlatFragment : Fragment() {
                 "Her şey hazırsa başlayalım...\n"
         val dialog_text2 = "Lütfen o kağıdı daha fazla ziyan etme!\n" +
                 "\n" +
-                "Belli ki 30 dakika bile versem çizemeyeceksin."
+                "Belli ki 30 dakika bile versem çizemeyeceksin.\n"
         val dialogs = Dialogs(requireContext())
         getCizerekAnlat(binding.kelime)
 
@@ -69,10 +70,12 @@ class CizerekAnlatFragment : Fragment() {
                 if(activity != null && isAdded){
                     dialogs.getEndDialog(dialog_text2, "Devam", activity)
                 }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
 
         }
-                dialogs.getInfoDialog(dialog_text, "Çizerek Anlat", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "Çizerek Anlat", null, timer)
 
         binding.button.setOnClickListener {
             timer.cancel()
@@ -87,6 +90,7 @@ class CizerekAnlatFragment : Fragment() {
                     e.printStackTrace()
                 } finally {
                     startActivity(Intent(requireActivity(),MainActivity::class.java))
+                    requireActivity().finish()
                 }
 
             }

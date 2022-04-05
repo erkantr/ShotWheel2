@@ -57,7 +57,7 @@
                     android:layout_marginRight="34dp"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="30"/>
+                    android:text="20"/>
 
             </LinearLayout>
 
@@ -88,5 +88,12 @@
             android:layout_gravity="center"
             android:layout_marginBottom="12dp"/>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:visibility="gone"
+        android:background="#E6000000"/>
 
 </RelativeLayout>

@@ -47,18 +47,19 @@ class AdsActivity : AppCompatActivity() {
         ) { }
         // Load the InterstitialAd and set the adUnitId (defined in values/strings.xml).
         loadInterstitialAd()
+        showInterstitial()
 
         // Create the next level button, which tries to show an interstitial when clicked.
         nextLevelButton = binding.nextLevelButton
         nextLevelButton.isEnabled = false
-        nextLevelButton.setOnClickListener { showInterstitial() }
+        //nextLevelButton.setOnClickListener { showInterstitial() }
 
-        levelTextView = binding.level
+        //levelTextView = binding.level
         // Create the text view to show the level number.
-        currentLevel = START_LEVEL
+       // currentLevel = START_LEVEL
 
         // Toasts the test ad message on the screen. Remove this after defining your own ad unit ID.
-        Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, TOAST_TEXT, Toast.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -81,16 +82,16 @@ class AdsActivity : AppCompatActivity() {
                     // The interstitialAd reference will be null until
                     // an ad is loaded.
                     interstitialAd = ad
-                    nextLevelButton.setEnabled(true)
-                    Toast.makeText(this@AdsActivity, "onAdLoaded()", Toast.LENGTH_SHORT)
-                        .show()
+                    //nextLevelButton.setEnabled(true)
+                    //Toast.makeText(this@AdsActivity, "onAdLoaded()", Toast.LENGTH_SHORT)
+                       // .show()
                     ad.setFullScreenContentCallback(
                         object : FullScreenContentCallback() {
                             override fun onAdDismissedFullScreenContent() {
                                 // Called when fullscreen content is dismissed.
                                 // Make sure to set your reference to null so you don't
                                 // show it a second time.
-                                interstitialAd = null
+                               // interstitialAd = null
                                 Log.d(TAG, "The ad was dismissed.")
                             }
 
@@ -98,7 +99,7 @@ class AdsActivity : AppCompatActivity() {
                                 // Called when fullscreen content failed to show.
                                 // Make sure to set your reference to null so you don't
                                 // show it a second time.
-                                interstitialAd = null
+                                //interstitialAd = null
                                 Log.d(TAG, "The ad failed to show.")
                             }
 
@@ -111,9 +112,9 @@ class AdsActivity : AppCompatActivity() {
 
                 override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                     // Handle the error
-                    Log.i(TAG, loadAdError.message)
+                    //Log.i(TAG, loadAdError.message)
                     interstitialAd = null
-                    nextLevelButton.setEnabled(true)
+                   // nextLevelButton.setEnabled(true)
                     val error: String = String.format(
                         Locale.ENGLISH,
                         "domain: %s, code: %d, message: %s",
@@ -136,7 +137,7 @@ class AdsActivity : AppCompatActivity() {
             interstitialAd!!.show(this)
         } else {
             Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show()
-            goToNextLevel()
+           // goToNextLevel()
         }
     }
 

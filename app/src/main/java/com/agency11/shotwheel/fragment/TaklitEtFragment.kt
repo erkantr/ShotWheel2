@@ -2,6 +2,7 @@ package com.agency11.shotwheel.fragment
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -42,7 +43,7 @@ class TaklitEtFragment : Fragment() {
                 "\n" +
                 "Ekrana gelecek kelimeyi taklit ederek arkadaşlarına anlatmak için 20 saniye süren olacak.\n" +
                 "\n" +
-                "Hazırsan başlayalım.."
+                "Hazırsan başlayalım..\n"
         val dialogs = Dialogs(requireContext())
         getTaklitEt(binding.kelime)
 
@@ -71,9 +72,11 @@ class TaklitEtFragment : Fragment() {
                         requireActivity().finish()
                     }
                 }
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
+                mediaPlayer.start()
             }
         }
-                dialogs.getInfoDialog(dialog_text, "Taklit Et", null, timer)
+                dialogs.getInfoDialog(binding.background,dialog_text, "Taklit Et", null, timer)
 
         binding.button.setOnClickListener {
             timer.cancel()

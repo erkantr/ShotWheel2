@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:id="@+id/relativelayout"
     tools:context=".activity.PrepareScreen">
 
     <ScrollView
@@ -39,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right">
 
-                    <Button
+                    <android.widget.Button
                         android:id="@+id/choose_button"
                         android:layout_width="75dp"
                         android:layout_height="35dp"
@@ -97,11 +98,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
                                 android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:background="@drawable/edittext_background_2"
+                                android:focusable="true" />
 
                         </LinearLayout>
 
@@ -138,6 +143,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -179,6 +185,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -221,6 +228,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -263,6 +271,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -305,6 +314,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:maxLength="10"
+                                android:inputType="text"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
@@ -318,7 +328,7 @@
                 </LinearLayout>
 
 
-                <Button
+                <android.widget.Button
                     android:id="@+id/start_button"
                     android:layout_width="210dp"
                     android:layout_height="68dp"

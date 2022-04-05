@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.media.MediaPlayer
@@ -24,7 +25,7 @@ class Dialogs(var context: Context) {
     var puan_durumu = 0
     var playerpointkey = ""
 
-    fun getMainInfoDialog() {
+    fun getMainInfoDialog(background: RelativeLayout) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.info_dialog)
@@ -48,13 +49,18 @@ class Dialogs(var context: Context) {
 
         button.visibility = View.GONE
 
-        close.setOnClickListener { dialog.dismiss() }
+        close.setOnClickListener {
+            background.visibility = View.GONE
+            dialog.dismiss() }
 
+            background.visibility = View.VISIBLE
         dialog.show()
         dialog.window!!.clearFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND)
+        //dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#CC000000")))
     }
 
     fun getInfoDialog(
+        background: RelativeLayout,
         main_text: String,
         button_text: String,
         mediaPlayer: MediaPlayer? = null,
@@ -85,11 +91,13 @@ class Dialogs(var context: Context) {
         title_button.text = button_text
         textView.text = main_text
         button.setOnClickListener {
+            background.visibility = View.GONE
             dialog.dismiss()
             mediaPlayer?.start()
             timer?.start()
         }
 
+        background.visibility = View.VISIBLE
         dialog.show()
         dialog.window!!.clearFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND)
     }
@@ -494,6 +502,7 @@ class Dialogs(var context: Context) {
                     }
                     dialog.dismiss()
                     activity.startActivity(Intent(context, MainActivity::class.java))
+                    activity.finish()
                 } else{
                     Toast.makeText(
                         context,
@@ -502,6 +511,7 @@ class Dialogs(var context: Context) {
                     ).show()
                     dialog.dismiss()
                     activity.startActivity(Intent(context, MainActivity::class.java))
+                    activity.finish()
                 }
 
             } else{
@@ -872,6 +882,7 @@ class Dialogs(var context: Context) {
         button.setOnClickListener {
             dialog.dismiss()
             activity.startActivity(Intent(activity, MainActivity::class.java))
+            activity.finish()
         }
 
         dialog.show()

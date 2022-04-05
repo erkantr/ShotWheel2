@@ -1,19 +1,22 @@
 package com.agency11.shotwheel.activity
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
 import android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.agency11.shotwheel.R
 import com.agency11.shotwheel.databinding.ActivityPrepareScreenBinding
-import com.agency11.shotwheel.databinding.InfoDialogBinding
+
 
 class PrepareScreen : AppCompatActivity() {
 
@@ -24,6 +27,7 @@ class PrepareScreen : AppCompatActivity() {
     lateinit var playerList: MutableSet<String>
     var players = 3
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPrepareScreenBinding.inflate(layoutInflater)
@@ -39,12 +43,13 @@ class PrepareScreen : AppCompatActivity() {
         }
         val start: Button = binding.startButton
         start.setOnClickListener {
-            val et1_text = binding.et1.text.toString()
-            val et2_text = binding.et2.text.toString()
-            val et3_text = binding.et3.text.toString()
-            val et4_text = binding.et4.text.toString()
-            val et5_text = binding.et5.text.toString()
-            val et6_text = binding.et6.text.toString()
+            val et1_text = binding.et1.text.toString().trim()
+
+            val et2_text = binding.et2.text.toString().trim()
+            val et3_text = binding.et3.text.toString().trim()
+            val et4_text = binding.et4.text.toString().trim()
+            val et5_text = binding.et5.text.toString().trim()
+            val et6_text = binding.et6.text.toString().trim()
 
 
             var preferences = getSharedPreferences("players", Context.MODE_PRIVATE)
@@ -326,6 +331,28 @@ class PrepareScreen : AppCompatActivity() {
         } else{
             Toast.makeText(this,"Oyundan çıkmak için bir daha tıklayın",Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        val ret = super.dispatchTouchEvent(ev)
+        ev?.let { event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                currentFocus?.let { view ->
+                    if (view is EditText) {
+                        val touchCoordinates = IntArray(2)
+                        view.getLocationOnScreen(touchCoordinates)
+                        val x: Float = event.rawX + view.getLeft() - touchCoordinates[0]
+                        val y: Float = event.rawY + view.getTop() - touchCoordinates[1]
+                        if (x < view.getLeft() || x >= view.getRight() || y < view.getTop() || y > view.getBottom()) {
+                            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                            imm.hideSoftInputFromWindow(view.windowToken, 0)
+                            view.clearFocus()
+                        }
+                    }
+                }
+            }
+        }
+        return ret
     }
 
 }
