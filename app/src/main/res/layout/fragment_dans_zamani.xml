@@ -9,28 +9,31 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/danceTimeLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="74dp"
-            android:gravity="center">
+            android:layout_marginTop="45dp">
 
             <TextView
+                android:id="@+id/danceTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="Puan:"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="#1E1B1B"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/puan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="15"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="#1E1B1B"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -39,14 +42,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="42dp"
-            android:layout_marginTop="213dp"
+            android:layout_marginTop="226dp"
             android:layout_marginRight="42dp"
             android:max="100"
             android:clickable="false"
             android:outlineAmbientShadowColor="@color/black"
             android:outlineSpotShadowColor="@color/black"
             android:progress="50"
-
             android:progressBackgroundTint="#FF0000"
             android:progressTint="#FF0000"
             android:thumbTint="#FF0000" />
@@ -57,10 +59,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/montserrat_medium"
             android:text="00:38/00:22"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textColor="#1E1B1B"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

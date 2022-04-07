@@ -19,10 +19,11 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/PrepareUpperLinear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="76dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="16dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -30,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/montserrat_medium"
                     android:text="Oyuncu Sayısı:"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
@@ -41,27 +42,39 @@
                     android:gravity="right">
 
                     <android.widget.Button
+                        android:fontFamily="@font/montserrat_medium"
                         android:id="@+id/choose_button"
                         android:layout_width="75dp"
                         android:layout_height="35dp"
                         android:layout_marginLeft="66dp"
-                        android:layout_marginRight="62dp"
+                        android:layout_marginRight="14dp"
                         android:background="@drawable/choose_button_background"
                         android:text="Seç"
                         android:textColor="#1D336B"
                         android:textAllCaps="false"
                         style="@style/start"
                         android:textSize="16sp" />
-
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/PrepareLowerLinear"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="32dp"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/PlayerNameTextView"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Oyuncu Adı:"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -73,8 +86,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
-                        android:layout_marginRight="24sp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/edittext_background">
 
                         <LinearLayout
@@ -83,30 +96,32 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et1"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
-                                android:inputType="text"
-                                android:clickable="true"
-                                android:focusableInTouchMode="true"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
                                 android:background="@drawable/edittext_background_2"
-                                android:focusable="true" />
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -117,9 +132,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginRight="24sp"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/edittext_background">
 
                         <LinearLayout
@@ -128,27 +143,29 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et2"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/edittext_background_2"
                                 android:inputType="text"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -159,9 +176,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginRight="24sp"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/edittext_background">
 
                         <LinearLayout
@@ -170,27 +187,29 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et3"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/edittext_background_2"
                                 android:inputType="text"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -201,11 +220,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginRight="24sp"
-                        android:background="@drawable/edittext_background"
-                        android:visibility="gone">
+                        android:layout_marginRight="16dp"
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_background">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -213,27 +232,29 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et4"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/edittext_background_2"
                                 android:inputType="text"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -244,11 +265,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginRight="24sp"
-                        android:background="@drawable/edittext_background"
-                        android:visibility="gone">
+                        android:layout_marginRight="16dp"
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_background">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -256,27 +277,29 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et5"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/edittext_background_2"
                                 android:inputType="text"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -287,11 +310,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="24sp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginRight="24sp"
-                        android:background="@drawable/edittext_background"
-                        android:visibility="gone">
+                        android:layout_marginRight="16dp"
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_background">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -299,27 +322,29 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/nameTextView6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/montserrat_regular"
                                 android:text="İsim:"
                                 android:textColor="#1B2752"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/et6"
-                                android:padding="5dp"
-                                android:textColor="@color/white"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:maxLength="10"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/edittext_background_2"
                                 android:inputType="text"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginBottom="5dp"
-                                android:background="@drawable/edittext_background_2" />
+                                android:maxLength="10"
+                                android:padding="5dp"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 
@@ -330,18 +355,18 @@
 
                 <android.widget.Button
                     android:id="@+id/start_button"
-                    android:layout_width="210dp"
-                    android:layout_height="68dp"
+                    android:layout_width="144dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="83dp"
                     android:background="@drawable/start_button"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto_medium"
                     android:theme="@style/AppTheme2"
                     android:textAllCaps="false"
                     style="@style/start"
                     android:text="İyi Eğlenceler"
                     android:textColor="@color/white"
-                    android:textSize="28sp" />
+                    android:textSize="16sp" />
 
 
             </LinearLayout>

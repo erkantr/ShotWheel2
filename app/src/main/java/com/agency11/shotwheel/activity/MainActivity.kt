@@ -98,8 +98,6 @@ class MainActivity : AppCompatActivity() {
 
         val size = Size(this)
 
-        size.setHeight(binding.players,30)
-
         bannerAd()
         intersititialAd()
         button.setOnClickListener {
@@ -198,7 +196,7 @@ class MainActivity : AppCompatActivity() {
 
                 } else {
 
-                    intent.putExtra("fragment", sectors[sectors.size - (degree + 1) + 1])
+                    intent.putExtra("fragment", sectors[sectors.size - (degree +1) +1])
 
                     //val bundle = Bundle()
                     //bundle.putString("player", playerList[a])

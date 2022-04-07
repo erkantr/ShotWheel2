@@ -11,28 +11,31 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/itirafEtLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="132dp">
+            android:layout_marginTop="45dp">
 
             <TextView
+                android:id="@+id/itirafEtTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="33dp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="Puan:"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="#1E1B1B"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/puan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="15"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="#1E1B1B"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,24 +43,26 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/itirafEtTextView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="33dp"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/montserrat_medium"
                     android:text="Kalan Süre:"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textColor="#1E1B1B"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="34dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="150"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="30"
+                    android:textColor="#1E1B1B"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -68,11 +73,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="160dp"
-            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="238dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Donald Trump"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+            android:textColor="#0F0F10"
+            android:textSize="32sp" />
 
 
         <TextView
@@ -80,11 +85,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="128dp"
-            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Başlamaya Son 15 Saniye"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textColor="#B60707"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

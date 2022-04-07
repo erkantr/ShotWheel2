@@ -11,53 +11,58 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/taklitEtLinear"
             android:layout_width="match_parent"
-            android:layout_marginTop="124dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp">
 
             <TextView
+                android:id="@+id/taklitEtTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="33dp"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Puan:"/>
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Puan:"
+                android:textColor="#1E1B1B"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/puan"
-                android:fontFamily="@font/roboto_regular"
                 android:layout_width="wrap_content"
-                android:textSize="24sp"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="15"/>
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="15"
+                android:textColor="#1E1B1B"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:gravity="right"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="right">
 
                 <TextView
+                    android:id="@+id/taklitEtTextView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="33dp"
-                    android:textSize="24sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Kalan Süre:"/>
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Kalan Süre:"
+                    android:textColor="#1E1B1B"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/time"
-                    android:fontFamily="@font/roboto_regular"
                     android:layout_width="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="34dp"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="20"/>
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="30"
+                    android:textColor="#1E1B1B"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -67,26 +72,26 @@
             android:id="@+id/kelime"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="142dp"
+            android:layout_marginTop="238dp"
             android:text="Donald Trump"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="30sp"
+            android:textColor="#0F0F10"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="32sp"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_width="122dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="215dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/blue_button"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Bildiler"
             android:textAllCaps="false"
-            android:layout_marginTop="98dp"
-            android:textSize="24sp"
-            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
-            android:background="@drawable/blue_button"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"/>
+            android:textSize="16sp" />
     </LinearLayout>
 
     <RelativeLayout

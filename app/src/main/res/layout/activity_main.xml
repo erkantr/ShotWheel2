@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,25 +26,26 @@
 
                 <Button
                     android:id="@+id/players"
-                    android:layout_width="170dp"
-                    android:layout_height="50dp"
+                    android:layout_width="158dp"
+                    android:layout_height="36dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="42dp"
                     android:layout_marginBottom="12dp"
-                    android:background="@drawable/blue_button"
-                    android:fontFamily="@font/roboto_regular"
+                    android:background="@drawable/main_button_background"
+                    android:fontFamily="@font/montserrat_medium"
                     android:text="Puan Tablosu"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textColor="#3B4868"
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
         <FrameLayout
+            android:id="@+id/rouletteFrame"
             android:layout_width="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="32dp"
             android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/roulette"
@@ -54,6 +56,7 @@
             android:src="@drawable/roulette"/>
 
             <ImageView
+                android:id="@+id/okImageView"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
@@ -64,12 +67,14 @@
         </FrameLayout>
 
         <TextView
+            android:id="@+id/yourTurnText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:textSize="27sp"
-            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="32dp"
+            android:textColor="#0F0F10"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Sıra Sende"/>
 
         <TextView
@@ -77,25 +82,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:textSize="24sp"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="#E08D11"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#EC5E0E"
             android:text="Erkan"/>
 
         <Button
             android:id="@+id/button"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
+            android:layout_width="77dp"
+            android:layout_height="36dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/blue_button"
-            android:fontFamily="@font/roboto_regular"
-            android:text="PAS"
+            android:background="@drawable/choose_button_background"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Pas"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textColor="#0F1A35"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -8,62 +8,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="46dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="33dp"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Puan:"/>
-
-        <TextView
-            android:fontFamily="@font/roboto_regular"
-            android:layout_width="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="15"/>
-
         <LinearLayout
+            android:id="@+id/soruyuCevaplaLinear"
             android:layout_width="match_parent"
-            android:gravity="right"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp">
 
             <TextView
+                android:id="@+id/soruyuCevaplaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="33dp"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Kalan Süre:"/>
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Puan:"
+                android:textColor="#1E1B1B"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/time"
-                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/puan"
                 android:layout_width="wrap_content"
-                android:textSize="24sp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="34dp"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="30"/>
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="15"
+                android:textColor="#1E1B1B"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/soruyuCevaplaTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="33dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Kalan Süre:"
+                    android:textColor="#1E1B1B"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="30"
+                    android:textColor="#1E1B1B"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/soruyuCevaplaLinear2"
             android:layout_width="match_parent"
-            android:layout_marginTop="21dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical"
             android:background="@drawable/question_background"
             android:layout_height="wrap_content">
@@ -73,8 +81,8 @@
                 android:layout_width="wrap_content"
                 android:layout_marginTop="147dp"
                 android:gravity="center"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="24sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="20sp"
                 android:text="Soru Alanı..."
                 android:layout_gravity="center"
                 android:textColor="@color/white"
@@ -89,11 +97,11 @@
                 android:id="@+id/a"
                 android:layout_width="match_parent"
                 android:text="A"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginTop="30dp"
-                android:textSize="24sp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="54dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/white"
                 android:background="@drawable/ic_question_background"
                 android:layout_height="wrap_content"/>
@@ -102,11 +110,11 @@
                 android:id="@+id/b"
                 android:layout_width="match_parent"
                 android:text="B"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginTop="13dp"
-                android:textSize="24sp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/white"
                 android:background="@drawable/ic_question_background"
                 android:layout_height="wrap_content"/>
@@ -115,11 +123,11 @@
                 android:id="@+id/c"
                 android:layout_width="match_parent"
                 android:text="C"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginTop="13dp"
-                android:textSize="24sp"
-                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/white"
                 android:background="@drawable/ic_question_background"
                 android:layout_height="wrap_content"/>
@@ -127,16 +135,16 @@
             <Button
                 android:id="@+id/d"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginBottom="42dp"
-                android:background="@drawable/ic_question_background"
-                android:fontFamily="@font/roboto_regular"
                 android:text="D"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="42dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:background="@drawable/ic_question_background"
+                android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
