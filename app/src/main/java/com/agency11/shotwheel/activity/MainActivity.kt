@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.data.BenKimim
 import com.agency11.shotwheel.databinding.ActivityMainBinding
 import com.agency11.shotwheel.fragment.*
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var playerList: Array<String>
     lateinit var adRequest: AdRequest
     lateinit var adView: AdView
-    var fullscreenAdView: InterstitialAd? = null
+    lateinit var fullscreenAdView: InterstitialAd
     private var isLoad: Boolean = false
     lateinit var button: Button
 
@@ -95,6 +96,10 @@ class MainActivity : AppCompatActivity() {
         adView = binding.adView
         button = binding.button
 
+        val size = Size(this)
+
+        size.setHeight(binding.players,30)
+
         bannerAd()
         intersititialAd()
         button.setOnClickListener {
@@ -102,10 +107,9 @@ class MainActivity : AppCompatActivity() {
             intersititialAd()
             //Toast.makeText(this, "Loading..", Toast.LENGTH_LONG).show()
             if(fullscreenAdView != null){
-                fullscreenAdView!!.show(this)
-                isLoaded(false)
+                fullscreenAdView.show(this)
+                // bisLoaded(false)
             } else{
-                isLoaded(true)
                 Toast.makeText(this,"Reklam yüklenemedi lütfen tekrar deneyin",Toast.LENGTH_SHORT).show()
             }
         }
@@ -280,7 +284,6 @@ class MainActivity : AppCompatActivity() {
                             override fun onAdFailedToShowFullScreenContent(adError: AdError) {
                                 super.onAdFailedToShowFullScreenContent(adError)
                                 isLoaded(false)
-                                fullscreenAdView = null
                                 Log.d(TAG, "The ad failed to show.")
                             }
 
@@ -295,7 +298,6 @@ class MainActivity : AppCompatActivity() {
                 override fun onAdFailedToLoad(loadAdError: LoadAdError) {
 
                     isLoaded(false)
-                    fullscreenAdView = null
 
                     val error: String = String.format(
                         Locale.ENGLISH,
