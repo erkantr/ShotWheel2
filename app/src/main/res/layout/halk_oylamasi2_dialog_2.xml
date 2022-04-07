@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_card"
+    android:layout_width="328dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/title_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/dialog_orangewhite_button"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="Oylama"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Sizce en sağlam tartışmacı kim?"
+                android:textColor="#0F0F10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="45dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Herkes sadece birini seçsin"
+                android:textColor="#5C5C62" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/number1"
+                    android:layout_width="42dp"
+                    android:layout_height="44dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/number2"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/number3"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout4"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/number4"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/number5"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:id="@+id/layout6"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/player6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/orange"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:text="Player"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/number6"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/blue_button"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="32dp"
+                android:paddingTop="12dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="12dp"
+                android:text="Devam"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>
