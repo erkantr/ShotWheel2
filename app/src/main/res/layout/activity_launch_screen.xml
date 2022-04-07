@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_gradient"
@@ -7,20 +7,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".activity.MainActivity">
 
 
-    <android.widget.Button
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:text="Shot Wheel"
+    <ImageView
+        android:layout_width="149dp"
+        android:layout_height="159dp"
         android:textSize="40sp"
         android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:fontFamily="@font/radley_regular"
-        android:background="@drawable/shotwheel_background"/>
+        android:backgroundTint="@color/white"
+        android:background="@drawable/ic_shotlogo"/>
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Shot Wheel"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/radley_regular"
+        android:textSize="40dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
 
 
 

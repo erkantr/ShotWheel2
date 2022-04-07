@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:rotation="22.5"
-            android:src="@drawable/ic_roulette"/>
+            android:src="@drawable/roulette"/>
 
             <ImageView
                 android:layout_width="25dp"
@@ -59,7 +59,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="173dp"
                 android:nextFocusLeft="@id/roulette"
-                android:src="@drawable/ic_target"/>
+                android:src="@drawable/ic_ok"/>
 
         </FrameLayout>
 
