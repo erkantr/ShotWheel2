@@ -92,9 +92,8 @@ class SoruCevaplaFragment : Fragment() {
 
 
             override fun onFinish() {
-                val activity: Activity = requireActivity()
                 if(activity != null && isAdded){
-                    dialogs.getEndDialog(dialog_text2, "Devam", requireActivity())
+                    dialogs.getEndDialog(dialog_text2, "Devam", activity!!)
                 }
                 val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.sad_trombone)
                 mediaPlayer.start()

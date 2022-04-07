@@ -28,7 +28,7 @@ class Dialogs(var context: Context) {
     fun getMainInfoDialog(background: RelativeLayout) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.info_dialog)
+        dialog.setContentView(R.layout.info_dialog_2)
 
         val window: Window = dialog.window ?: return
 
@@ -68,7 +68,7 @@ class Dialogs(var context: Context) {
     ) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.info_dialog)
+        dialog.setContentView(R.layout.info_dialog_2)
 
         val window: Window = dialog.window ?: return
 
@@ -90,6 +90,8 @@ class Dialogs(var context: Context) {
         close.visibility = View.GONE
         title_button.text = button_text
         textView.text = main_text
+        title_button.setBackgroundResource(R.drawable.dialog_bluewhite_button)
+        title_button.setTextColor(context.resources.getColor(R.color.blue))
         button.setOnClickListener {
             background.visibility = View.GONE
             dialog.dismiss()
@@ -238,7 +240,7 @@ class Dialogs(var context: Context) {
     fun getOylamaDialog(player: String, text: String, activity: Activity, game_point: Int) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.halk_oylamasi2_dialog)
+        dialog.setContentView(R.layout.halk_oylamasi2_dialog_2)
 
         val window: Window = dialog.window ?: return
 
@@ -532,7 +534,7 @@ class Dialogs(var context: Context) {
     public fun getDansOylamasiDialog(player: String, activity: Activity) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.halk_oylamasi1_dialog)
+        dialog.setContentView(R.layout.halk_oylamasi1_dialog_2)
 
         val window: Window = dialog.window ?: return
 
@@ -877,6 +879,8 @@ class Dialogs(var context: Context) {
         close.visibility = View.GONE
         title_button.text = "Süre Doldu!"
         textView.text = main_text
+        title_button.setBackgroundResource(R.drawable.dialog_redwhite_button)
+        title_button.setTextColor(context.resources.getColor(R.color.red))
         button.text = button2_text
 
         button.setOnClickListener {
