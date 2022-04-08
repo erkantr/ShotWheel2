@@ -1,104 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:id="@+id/dialog_card"
+    android:layout_width="328dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/dialog_button_background_2"
-    app:cardCornerRadius="25dp">
-
-    <ImageView
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:src="@drawable/dialog_gradient" />
-
-    <ImageView
-        android:id="@+id/view2"
-        android:layout_width="25dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/dialog_gradient_linear" />
-
-    <ImageView
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_gravity="bottom"
-        android:src="@drawable/dialog_gradient_2" />
-
-    <ImageView
-        android:id="@+id/view4"
-        android:layout_width="25dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:src="@drawable/dialog_gradient_linear_2" />
+    app:cardCornerRadius="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp">
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/ic_close" />
-
-        <Button
-            android:id="@+id/title_button"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/dark_red_button"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Başlıyoruz..."
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="35dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="18sp"
-            android:layout_marginRight="25dp"
-            android:gravity="center"
-            android:text="Öncelikle hoşgeldiniz.\n\nHer kategorinin bilgilendirme penceresi, sırası gelen kişiyi yönlendirecektir.\n\nÇarkı döndürmek için üzerine bir kere dokunmak yeterlidir.\n\nHer kategori süreli ve puanlıdır.\n\nSırasını geçmek isteyen pas butonunu kullanabilir.\n\nAyrıca puan tablosundan puanlar görüntülenebilir.\n\nİyi eğlenceler...\n" />
+            <LinearLayout
+                android:id="@+id/titlelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="Hazırım..."
-            android:textAllCaps="false"
-            android:textSize="24sp"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/white"
-            android:background="@drawable/blue_button"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"/>
+                <Button
+                    android:id="@+id/title_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:text="Başlıyoruz!"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/ic_close_circle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Öncelikle hoşgeldiniz.\n\nHer kategorinin bilgilendirme penceresi, sırası gelen kişiyi yönlendirecektir.\n\nÇarkı döndürmek için üzerine bir kere dokunmak yeterlidir.\n\nHer kategori süreli ve puanlıdır.\n\nSırasını geçmek isteyen pas butonunu kullanabilir.\n\nAyrıca puan tablosundan puanlar görüntülenebilir.\n\nİyi eğlenceler...\n"
+                android:textColor="#0F0F10"
+                android:textSize="16sp" />
 
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/blue_button"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="Hazırım"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
     </ScrollView>
 

@@ -1,307 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:id="@+id/dialog_card"
+    android:layout_width="328dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/dialog_button_background_2"
-    app:cardCornerRadius="25dp">
-
-    <ImageView
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:src="@drawable/dialog_gradient" />
-
-    <ImageView
-        android:id="@+id/view2"
-        android:layout_width="25dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/dialog_gradient_linear" />
-
-    <ImageView
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_gravity="bottom"
-        android:src="@drawable/dialog_gradient_2" />
-
-    <ImageView
-        android:id="@+id/view4"
-        android:layout_width="25dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:src="@drawable/dialog_gradient_linear_2" />
+    app:cardCornerRadius="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/title_button"
+            <LinearLayout
+                android:id="@+id/titlelayout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/dark_red_button"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Puanlar"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/title_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_orangewhite_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:text="Puanlar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
             <TextView
+                android:id="@+id/text"
                 android:layout_width="match_parent"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:layout_marginLeft="65dp"
-                android:layout_marginRight="65dp"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Oyuncu ve Puan Bilgileri"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Oyuncu ve puan bilgileri"
+                android:textColor="#0F0F10"
+                android:textSize="16sp" />
 
             <LinearLayout
+                android:id="@+id/layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1:"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/point1"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
-                    android:layout_marginRight="20dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"/>
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/point1"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:gravity="center"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
 
-                    <TextView
+                    <Button
                         android:id="@+id/point2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="100"
-                        android:layout_marginRight="20dp"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"/>
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:gravity="center"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
 
-                    <TextView
+                    <Button
                         android:id="@+id/point3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="100"
-                        android:layout_marginRight="20dp"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"/>
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:gravity="center"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
 
-                    <TextView
+                    <Button
                         android:id="@+id/point4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
                         android:text="0"
-                        android:layout_marginRight="20dp"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"/>
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:gravity="center"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
 
-                    <TextView
+                    <Button
                         android:id="@+id/point5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
                         android:text="0"
-                        android:layout_marginRight="20dp"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"/>
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center"
+                android:id="@+id/layout6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
                     android:id="@+id/player6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:text="Player1"/>
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/dialog_oylama_button"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="120dp"
+                    android:text="Player"
+                    android:textAllCaps="false"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="right"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
 
-                    <TextView
+                    <Button
                         android:id="@+id/point6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="42dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dialog_oylama_button"
+                        android:fontFamily="@font/montserrat_medium"
                         android:text="0"
-                        android:layout_marginRight="20dp"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"/>
+                        android:textAllCaps="false"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/blue_button"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
                 android:text="Devam"
                 android:textAllCaps="false"
-                android:layout_marginTop="43dp"
-                android:textSize="24sp"
-                android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/white"
-                android:background="@drawable/blue_button"
-                android:layout_gravity="center"
-                android:layout_marginBottom="12dp"/>
+                android:textSize="16sp" />
+
         </LinearLayout>
 
     </ScrollView>

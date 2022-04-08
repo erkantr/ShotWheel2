@@ -110,8 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-    </com.google.android.gms.ads.AdView>
+        ads:adUnitId="ca-app-pub-7049590005832697/6879252432"></com.google.android.gms.ads.AdView>
 
     <FrameLayout
         android:id="@+id/frame"

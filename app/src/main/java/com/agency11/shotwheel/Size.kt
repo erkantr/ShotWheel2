@@ -3,7 +3,7 @@ package com.agency11.shotwheel
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup.MarginLayoutParams
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.TextView
 
 class Size(mContext: Context) {
@@ -23,6 +23,10 @@ class Size(mContext: Context) {
 
     fun setSize(textView: TextView, size: Int) {
         textView.textSize = calcSize(size.toFloat()).toFloat()
+    }
+
+    fun setButtonSize(button:Button, size: Int){
+        button.textSize = calcSize(size.toFloat()).toFloat()
     }
 
     fun setPadding(view: View, left: Int, top: Int, right: Int, bottom: Int) {

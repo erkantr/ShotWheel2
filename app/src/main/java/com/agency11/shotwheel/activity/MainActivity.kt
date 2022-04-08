@@ -120,14 +120,15 @@ class MainActivity : AppCompatActivity() {
         bannerAd()
         intersititialAd()
         button.setOnClickListener {
-            button.isEnabled = false
             intersititialAd()
+            button.isEnabled = false
             //Toast.makeText(this, "Loading..", Toast.LENGTH_LONG).show()
             if(fullscreenAdView != null){
                 fullscreenAdView.show(this)
                 // bisLoaded(false)
             } else{
                 Toast.makeText(this,"Reklam yüklenemedi lütfen tekrar deneyin",Toast.LENGTH_SHORT).show()
+                //button.isEnabled = true
             }
         }
 
@@ -270,6 +271,7 @@ class MainActivity : AppCompatActivity() {
 
     fun intersititialAd() {
         MobileAds.initialize(this)
+        /*
         if (BuildConfig.DEBUG) {
            // fullscreenAdView = InterstitialAd(applicationContext)
            // fullscreenAdView.adUnitId = "ca-app-pub-3940256099942544/1033173712"
@@ -278,9 +280,11 @@ class MainActivity : AppCompatActivity() {
             MobileAds.setRequestConfiguration(requestConfiguration)
             adRequest = AdRequest.Builder().build()
         } else {
-            adRequest = AdRequest.Builder().build()
+
         }
 
+         */
+        adRequest = AdRequest.Builder().build()
         InterstitialAd.load(this, getString(R.string.interstitial_ad_unit_id), adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: InterstitialAd) {
@@ -347,15 +351,18 @@ class MainActivity : AppCompatActivity() {
 
     fun bannerAd() {
         MobileAds.initialize(this)
+        /*
         if (BuildConfig.DEBUG) {
             val requestConfiguration = RequestConfiguration.Builder()
                 .setTestDeviceIds(Arrays.asList("EAD98D52B6934D07B9DAD189F4BACB64")).build()
             MobileAds.setRequestConfiguration(requestConfiguration)
             adRequest = AdRequest.Builder().build()
         } else {
-            adRequest = AdRequest.Builder().build()
+
         }
 
+         */
+        adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
         adView.adListener = object : AdListener() {

@@ -57,6 +57,7 @@ class SoruCevaplaFragment : Fragment() {
         //binding = FragmentSoruCevaplaBinding.inflate(inflater, container, false)
         //val view = binding.root
         val view = inflater.inflate(R.layout.fragment_soru_cevapla, container, false)
+        val size = Size(requireContext())
 
         val size = Size(requireContext())
 
