@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.activity.MainActivity
 import com.agency11.shotwheel.data.CizerekAnlat
 import com.agency11.shotwheel.data.TaklitEt
@@ -38,6 +39,24 @@ class TaklitEtFragment : Fragment() {
     ): View? {
         binding = FragmentTaklitEtBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val size = Size(requireContext())
+
+        size.setMargin(binding.taklitEtLinear,0,45,0,0)
+        size.setMargin(binding.taklitEtTextView,16,0,0,0)
+        size.setSize(binding.taklitEtTextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.taklitEtTextView2,33,0,0,0)
+        size.setSize(binding.taklitEtTextView2,14)
+        size.setMargin(binding.time,12,0,16,0)
+        size.setSize(binding.time,20)
+        size.setMargin(binding.kelime,0,238,0,0)
+        size.setSize(binding.kelime,32)
+        size.setWidth(binding.button,122)
+        size.setHeight(binding.button,44)
+        size.setMargin(binding.button,0,215,0,12)
+        size.setSize(binding.button,16)
 
         val dialog_text = "Lütfen telefonu eline al ve kimseye gösterme.\n" +
                 "\n" +

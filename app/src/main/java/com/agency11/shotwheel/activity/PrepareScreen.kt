@@ -15,6 +15,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.databinding.ActivityPrepareScreenBinding
 
 
@@ -33,6 +34,61 @@ class PrepareScreen : AppCompatActivity() {
         binding = ActivityPrepareScreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val size = Size(this)
+
+        size.setMargin(binding.PrepareUpperLinear,16,50,0,0)
+        size.setSize(binding.players,18)
+        size.setWidth(binding.chooseButton,75)
+        size.setHeight(binding.chooseButton,35)
+        size.setMargin(binding.chooseButton,66,0,14,0)
+        size.setSize(binding.chooseButton,16)
+        size.setMargin(binding.PrepareLowerLinear,0,32,0,0)
+        size.setMargin(binding.PlayerNameTextView,16,0,0,12)
+        size.setSize(binding.PlayerNameTextView,14)
+        size.setMargin(binding.edit1,16,0,16,0)
+        size.setMargin(binding.nameTextView,16,0,0,0)
+        size.setSize(binding.nameTextView,14)
+        size.setHeight(binding.et1,40)
+        size.setMargin(binding.et1,10,4,4,4)
+        size.setPadding(binding.et1,5,5,5,5)
+        size.setMargin(binding.edit2,16,16,16,0)
+        size.setMargin(binding.nameTextView2,16,0,0,0)
+        size.setSize(binding.nameTextView2,14)
+        size.setHeight(binding.et2,40)
+        size.setMargin(binding.et2,10,4,4,4)
+        size.setPadding(binding.et2,5,5,5,5)
+        size.setMargin(binding.edit3,16,16,16,0)
+        size.setMargin(binding.nameTextView3,16,0,0,0)
+        size.setSize(binding.nameTextView3,14)
+        size.setHeight(binding.et3,40)
+        size.setMargin(binding.et3,10,4,4,4)
+        size.setPadding(binding.et3,5,5,5,5)
+        size.setMargin(binding.edit4,16,16,16,0)
+        size.setMargin(binding.nameTextView4,16,0,0,0)
+        size.setSize(binding.nameTextView4,14)
+        size.setHeight(binding.et4,40)
+        size.setMargin(binding.et4,10,4,4,4)
+        size.setPadding(binding.et4,5,5,5,5)
+        size.setMargin(binding.edit5,16,16,16,0)
+        size.setMargin(binding.nameTextView5,16,0,0,0)
+        size.setSize(binding.nameTextView5,14)
+        size.setHeight(binding.et5,40)
+        size.setMargin(binding.et5,10,4,4,4)
+        size.setPadding(binding.et5,5,5,5,5)
+        size.setMargin(binding.edit6,16,16,16,0)
+        size.setMargin(binding.nameTextView6,16,0,0,0)
+        size.setSize(binding.nameTextView6,14)
+        size.setHeight(binding.et6,40)
+        size.setMargin(binding.et6,10,4,4,4)
+        size.setPadding(binding.et6,5,5,5,5)
+        size.setWidth(binding.startButton,144)
+        size.setHeight(binding.startButton,35)
+        size.setMargin(binding.startButton,0,83,0,0)
+        size.setSize(binding.startButton,16)
+        
+
+
 
         edit4 = binding.edit4
         edit5 = binding.edit5

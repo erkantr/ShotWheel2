@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.data.CizerekAnlat
 import com.agency11.shotwheel.data.TartismaZamani
 import com.agency11.shotwheel.databinding.FragmentCizerekAnlatBinding
@@ -37,6 +38,22 @@ class TartismaZamaniFragment : Fragment() {
     ): View? {
         binding = FragmentTartismaZamaniBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val size = Size(requireContext())
+
+        size.setMargin(binding.tartismaZamaniLinear,0,45,0,0)
+        size.setMargin(binding.tartismaZamaniTextView,16,0,0,0)
+        size.setSize(binding.tartismaZamaniTextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.tartismaZamaniTextView2,33,0,0,0)
+        size.setSize(binding.tartismaZamaniTextView2,14)
+        size.setMargin(binding.time,12,0,16,0)
+        size.setSize(binding.time,20)
+        size.setMargin(binding.kelime,5,238,5,0)
+        size.setSize(binding.kelime,32)
+
+
 
         val dialog_text = "Lütfen telefon herkesin görebileceği bir yerde dursun.\n" +
                 "\n" +

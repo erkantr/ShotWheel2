@@ -98,6 +98,25 @@ class MainActivity : AppCompatActivity() {
 
         val size = Size(this)
 
+        size.setWidth(binding.players,158)
+        size.setHeight(binding.players,36)
+        size.setMargin(binding.players,0,42,0,12)
+        size.setSize(binding.players,16)
+        size.setMargin(binding.rouletteFrame,0,32,0,0)
+        size.setWidth(binding.okImageView,25)
+        size.setHeight(binding.okImageView,25)
+        size.setMargin(binding.okImageView,173,0,0,0)
+        size.setMargin(binding.yourTurnText,0,32,0,0)
+        size.setSize(binding.yourTurnText,14)
+        size.setMargin(binding.currplayer,0,12,0,0)
+        size.setSize(binding.currplayer,24)
+        size.setWidth(binding.button,77)
+        size.setHeight(binding.button,36)
+        size.setMargin(binding.button,0,32,0,12)
+        size.setSize(binding.button,16)
+
+
+
         bannerAd()
         intersititialAd()
         button.setOnClickListener {

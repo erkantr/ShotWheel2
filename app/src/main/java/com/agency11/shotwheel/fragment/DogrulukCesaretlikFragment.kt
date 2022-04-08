@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.activity.MainActivity
 import com.agency11.shotwheel.data.CizerekAnlat
 import com.agency11.shotwheel.databinding.FragmentCizerekAnlatBinding
@@ -38,6 +39,25 @@ class DogrulukCesaretlikFragment : Fragment() {
     ): View? {
         binding = FragmentDogrulukCesaretlikBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val size = Size(requireContext())
+
+        size.setMargin(binding.dogrulukCesaretLinear,0,45,0,0)
+        size.setMargin(binding.dogrulukCesaretTextView,16,0,0,0)
+        size.setSize(binding.dogrulukCesaretTextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.dogrulukCesaretTextView2,33,0,0,0)
+        size.setSize(binding.dogrulukCesaretTextView2,14)
+        size.setMargin(binding.time,12,0,16,0)
+        size.setSize(binding.time,20)
+        size.setMargin(binding.kisi,0,238,0,0)
+        size.setSize(binding.kisi,32)
+        size.setWidth(binding.button,193)
+        size.setHeight(binding.button,44)
+        size.setMargin(binding.button,0,215,0,12)
+        size.setSize(binding.button,16)
+
 
         val dialog_text = "Gerçek oyundan tek farkı, soracak kişiyi ben seçiyorum :P\n" +
                 "\n" +

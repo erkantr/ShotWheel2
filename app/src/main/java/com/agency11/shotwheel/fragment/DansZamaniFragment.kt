@@ -14,6 +14,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.databinding.FragmentDansZamaniBinding
 import kotlin.random.Random
 
@@ -38,6 +39,20 @@ class DansZamaniFragment : Fragment() {
     ): View? {
         binding = FragmentDansZamaniBinding.inflate(inflater,container,false)
         val view = binding.root
+
+        val size = Size(requireContext())
+
+        size.setMargin(binding.danceTimeLinear,0,45,0,0)
+        size.setMargin(binding.danceTimeTextView,16,0,0,0)
+        size.setSize(binding.danceTimeTextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.seekBar,42,226,42,0)
+        size.setMargin(binding.duration,0,15,0,0)
+        size.setSize(binding.duration,18)
+
+
+
 
         val dialog_text = "Önce seni bi ayağa alalım şanslı dostum.\n" +
                 "\n" +

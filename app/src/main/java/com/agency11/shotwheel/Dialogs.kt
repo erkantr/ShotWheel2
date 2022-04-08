@@ -28,7 +28,7 @@ class Dialogs(var context: Context) {
     fun getMainInfoDialog(background: RelativeLayout) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.info_dialog_2)
+        dialog.setContentView(R.layout.info_dialog)
 
         val window: Window = dialog.window ?: return
 
@@ -68,7 +68,7 @@ class Dialogs(var context: Context) {
     ) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.info_dialog_2)
+        dialog.setContentView(R.layout.info_dialog)
 
         val window: Window = dialog.window ?: return
 
@@ -534,7 +534,7 @@ class Dialogs(var context: Context) {
     public fun getDansOylamasiDialog(player: String, activity: Activity) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.halk_oylamasi1_dialog_2)
+        dialog.setContentView(R.layout.halk_oylamasi1_dialog)
 
         val window: Window = dialog.window ?: return
 

@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.activity.MainActivity
 import com.agency11.shotwheel.data.BenKimim
 import com.agency11.shotwheel.databinding.FragmentBenKimimBinding
@@ -45,6 +46,25 @@ class BenKimimFragment : Fragment() {
     ): View? {
         binding = FragmentBenKimimBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val size = Size(requireContext())
+        size.setMargin(binding.whoamILinear,0,45,0,0)
+        size.setMargin(binding.whoamITextView,16,0,0,0)
+        size.setSize(binding.whoamITextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.whoamITextView2,33,0,0,0)
+        size.setSize(binding.whoamITextView2,14)
+        size.setMargin(binding.time,12,0,16,0)
+        size.setSize(binding.time,20)
+        size.setMargin(binding.kelime,0,143,0,0)
+        size.setSize(binding.kelime,32)
+        size.setMargin(binding.yasakliKelimeler,0,16,0,0)
+        size.setSize(binding.yasakliKelimeler,24)
+        size.setWidth(binding.button,122)
+        size.setHeight(binding.button,44)
+        size.setMargin(binding.button,0,120,0,12)
+        size.setSize(binding.button,16)
 
         val dialog_text = "Lütfen telefonu eline al ve ekranı kimseye gösterme.\n" +
                 "\n" +

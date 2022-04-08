@@ -19,6 +19,7 @@ import com.agency11.shotwheel.databinding.FragmentSoruCevaplaBinding
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.activity.MainActivity
 import com.agency11.shotwheel.activity.PrepareScreen
 import kotlin.concurrent.thread
@@ -57,6 +58,9 @@ class SoruCevaplaFragment : Fragment() {
         //val view = binding.root
         val view = inflater.inflate(R.layout.fragment_soru_cevapla, container, false)
 
+        val size = Size(requireContext())
+
+
         val dialog_text = "Ekrana gelecek soruyu cevaplamak için 30 saniye süren olacak.\n" +
                 "\n" +
                 "Kendini hazır hissettiğin an başlayabilirsin."
@@ -64,20 +68,49 @@ class SoruCevaplaFragment : Fragment() {
                 "\n" +
                 "Çekmiyor mu?\n"
         val dialogs = Dialogs(requireContext())
-
         val background: RelativeLayout = view.findViewById(R.id.background)
-
         getSoruCevapla()
-
         val preferences = requireContext().getSharedPreferences("players", Context.MODE_PRIVATE)
         player = preferences.getString("currplayer", "")!!
-
         val linearLayout1: LinearLayout = view.findViewById(R.id.question_layout)
+
+
         soru_text = view.findViewById(R.id.soru)
         a_text = view.findViewById(R.id.a)
         b_text = view.findViewById(R.id.b)
         c_text = view.findViewById(R.id.c)
         d_text = view.findViewById(R.id.d)
+
+        val soruyuCevaplaLinear : LinearLayout = view.findViewById(R.id.soruyuCevaplaLinear)
+        val soruyuCevaplaTextView : TextView = view.findViewById(R.id.soruyuCevaplaTextView)
+        val puan : TextView = view.findViewById(R.id.puan)
+        val soruyuCevaplaTextView2 : TextView = view.findViewById(R.id.soruyuCevaplaTextView2)
+        val time : TextView = view.findViewById(R.id.time)
+        val soruyuCevaplaLinear2 : LinearLayout = view.findViewById(R.id.soruyuCevaplaLinear2)
+
+        
+        size.setMargin(soruyuCevaplaLinear,0,45,0,0)
+        size.setMargin(soruyuCevaplaTextView,16,0,0,0)
+        size.setSize(soruyuCevaplaTextView,14)
+        size.setMargin(puan,12,0,0,0)
+        size.setSize(puan,20)
+        size.setMargin(soruyuCevaplaTextView2,33,0,0,0)
+        size.setSize(soruyuCevaplaTextView2,14)
+        size.setMargin(time,12,0,16,0)
+        size.setSize(time,20)
+        size.setMargin(soruyuCevaplaLinear2,16,73,16,0)
+        size.setMargin(soru_text,0,147,0,0)
+        size.setSize(soru_text,20)
+        size.setMargin(a_text,24,54,24,0)
+        size.setSize(a_text,16)
+        size.setMargin(b_text,24,16,24,0)
+        size.setSize(b_text,16)
+        size.setMargin(c_text,24,16,24,0)
+        size.setSize(c_text,16)
+        size.setMargin(d_text,24,16,24,42)
+        size.setSize(d_text,16)
+
+
 
         for (i in 0..3) {
             linearLayout1.getChildAt(i).setOnClickListener { v -> checkAnswer(v as Button) }

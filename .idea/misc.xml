@@ -59,8 +59,9 @@
         <entry key="app/src/main/res/drawable/start_button.xml" value="0.334" />
         <entry key="app/src/main/res/layout/activity_ads.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/layout/activity_fragment.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/activity_launch_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_prepare_screen.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_prepare_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/choose_player_dialog.xml" value="0.33177083333333335" />
         <entry key="app/src/main/res/layout/fragment_ben_kimim.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.33177083333333335" />
@@ -68,7 +69,7 @@
         <entry key="app/src/main/res/layout/fragment_dans_zamani.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_dogruluk_cesaretlik.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/fragment_itiraf_et.xml" value="0.32447916666666665" />
-        <entry key="app/src/main/res/layout/fragment_soru_cevapla.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_soru_cevapla.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_taklit_et.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/fragment_tartisma_zamani.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/info_dialog.xml" value="0.33177083333333335" />

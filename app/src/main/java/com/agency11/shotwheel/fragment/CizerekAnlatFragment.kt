@@ -14,6 +14,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.agency11.shotwheel.Dialogs
 import com.agency11.shotwheel.R
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.activity.MainActivity
 import com.agency11.shotwheel.data.BenKimim
 import com.agency11.shotwheel.data.CizerekAnlat
@@ -40,6 +41,27 @@ class CizerekAnlatFragment : Fragment() {
     ): View? {
         binding = FragmentCizerekAnlatBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val size = Size(requireContext())
+
+        size.setMargin(binding.cizerekAnlatLinear,0,45,0,0)
+        size.setMargin(binding.cizerekAnlatTextView,16,0,0,0)
+        size.setSize(binding.cizerekAnlatTextView,14)
+        size.setMargin(binding.puan,12,0,0,0)
+        size.setSize(binding.puan,20)
+        size.setMargin(binding.cizerekAnlatTextView2,33,0,0,0)
+        size.setSize(binding.cizerekAnlatTextView2,14)
+        size.setMargin(binding.time,12,0,16,0)
+        size.setSize(binding.time,20)
+        size.setMargin(binding.kelime,0,238,0,0)
+        size.setSize(binding.kelime,32)
+        size.setWidth(binding.button,122)
+        size.setHeight(binding.button,44)
+        size.setMargin(binding.button,0,120,0,12)
+        size.setSize(binding.button,16)
+
+
+
 
         val dialog_text = "Lütfen telefonu eline al ve ekranı kimseye gösterme.\n" +
                 "\n" +

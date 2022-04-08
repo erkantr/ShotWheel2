@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.agency11.shotwheel.Size
 import com.agency11.shotwheel.databinding.ActivityLaunchScreenBinding
 import kotlin.concurrent.thread
 
@@ -18,6 +19,14 @@ class LaunchScreen : AppCompatActivity() {
         binding = ActivityLaunchScreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val size = Size(this)
+
+        size.setWidth(binding.launchImage,149)
+        size.setHeight(binding.launchImage,159)
+        size.setMargin(binding.launchText,0,24,0,0)
+        size.setSize(binding.launchText,40)
+
 
         thread(start = true){
 

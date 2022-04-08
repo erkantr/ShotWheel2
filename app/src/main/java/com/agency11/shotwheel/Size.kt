@@ -3,6 +3,7 @@ package com.agency11.shotwheel
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup.MarginLayoutParams
+import android.widget.ImageView
 import android.widget.TextView
 
 class Size(mContext: Context) {
