@@ -59,8 +59,6 @@ class SoruCevaplaFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_soru_cevapla, container, false)
         val size = Size(requireContext())
 
-        val size = Size(requireContext())
-
 
         val dialog_text = "Ekrana gelecek soruyu cevaplamak için 30 saniye süren olacak.\n" +
                 "\n" +

@@ -57,7 +57,7 @@ class Dialogs(var context: Context) {
         size.setMargin(close, 24, 0, 24, 0)
         size.setMargin(text, 24, 32, 24, 0)
         size.setSize(text, 16)
-        size.setMargin(button, 24, 32, 24, 0)
+        size.setMargin(button, 24, 32, 24, 24)
         size.setPadding(button, 32, 0, 32, 0)
         size.setButtonSize(button, 16)
 
@@ -1129,7 +1129,7 @@ class Dialogs(var context: Context) {
         size.setMargin(close, 24, 0, 24, 0)
         size.setMargin(text, 24, 32, 24, 0)
         size.setSize(text, 16)
-        size.setMargin(button, 24, 32, 24, 0)
+        size.setMargin(button, 24, 32, 24, 24)
         size.setPadding(button, 32, 0, 32, 0)
         size.setButtonSize(button, 16)
 
